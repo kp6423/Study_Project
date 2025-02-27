@@ -35,7 +35,8 @@
 }
 .Horizontal-icon-bar a {
   /*display: inline;
-  */font-size: 36px;
+  */
+  font-size: 36px;
   width: 20%;
   float: left;
   text-align: center;
@@ -52,5 +53,4 @@
 }
 .Horizontal-icon-bar a:hover {
   background-color: #000;
-
 }
