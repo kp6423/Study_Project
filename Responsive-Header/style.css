@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header & Layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 15px 20px;
+  color: white;
+  position: relative;
+}
+
+/* Logo */
+.logo .logo1 {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.logo .logo1 span {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/* Navigation */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  display: block;
+}
+
+/* Dropdown */
+.nav-links .dropdown-content {
+  display: none;
+  position: absolute;
+  background: #444;
+  min-width: 150px;
+  top: 100%;
+  left: 0;
+}
+
+.nav-links .dropdown-content li {
+  width: 100%;
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.search-bar input {
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+  width: 200px;
+}
+
+.search-bar button {
+  background: #ffcc00;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.search-bar button:hover {
+  background: #ff9900;
+}
+
+/* Hover Effects */
+.nav-links a:hover {
+  background: #555;
+  transition: background 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.nav-links .dropdown-content a:hover {
+  background: #666;
+  border-radius: 5px;
+}
+
+.logo .logo1:hover {
+  color: #ffcc00;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablet Devices */
+@media (max-width: 1024px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .search-bar {
+    margin: 10px 0;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Stack Logo & Search */
+  .logo,
+  .search-bar {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  /* Navigation becomes a hidden vertical menu */
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 120px; /* Adjusted to be below header elements */
+    left: 0;
+    background: #333;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* Show the menu toggle button */
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    margin: 10px 20px;
+  }
+
+  /* Adjust search bar for mobile */
+  .search-bar input {
+    width: 80%;
+  }
+}
