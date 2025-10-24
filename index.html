@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project-List</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      .header {
+        text-align: center;
+        background-color: #adadad;
+      }
+
+      h2 {
+        padding: 15px;
+      }
+
+      .projectList {
+        width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      li a:hover {
+        background-color: #f0f0f0;
+      }
+
+      li:last-child a{
+        border-bottom: none;
+      }
+
+    @media screen and (max-width: 500px) {
+      .projectList {
+        width: 90%;
+        margin: 50px auto;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h2>Project List</h2>
+    </div>
+    <div class="projectList">
+      <ul>
+        <li><a href="icon-bar/">Icon-bar</a></li>
+        <li><a href="Menu-icon/">Menu-Icon</a></li>
+        <li><a href="Responsive-Header/">Responsive-Header</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
